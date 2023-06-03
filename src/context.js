@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, {Component} from 'react'
+import axios from 'axios'
 
 const Context = React.createContext()
 
 const reducer = (state, action) => {
-    switch (action.type){
+    switch (action.type) {
         case 'SEARCH_TRACKS':
             return {
                 ...state,
@@ -36,7 +36,7 @@ export class Provider extends Component {
             <Context.Provider value={this.state}>
                 {this.props.children}
             </Context.Provider>
-        );
+        )
     }
 }
 

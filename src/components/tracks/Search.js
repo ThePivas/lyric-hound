@@ -6,7 +6,8 @@ import {ReactComponent as Hound} from '../layout/hound.svg'
 class Search extends Component {
 
     state = {
-        track_title: ''
+        track_title: '',
+        active: false
     }
 
     onChange = (e) => {
@@ -32,17 +33,17 @@ class Search extends Component {
                     const {dispatch} = value
                     return (
                         <>
-                            <div className="d-flex justify-content-center align-items-center">
+                            <div className='d-flex justify-content-center align-items-center'>
                                 <Hound/>
                             </div>
-                            <div className="card card-body mb-4 p-4">
-                                <h1 className="display-4 text-center">Search For A Song</h1>
-                                <p className="lead text-center">Get The Lyrics For Your Song</p>
+                            <div className='card card-body mb-4 p-4'>
+                                <h1 className='display-4 text-center'>Search For A Song</h1>
+                                <p className='lead text-center'>Let him sniff and dig</p>
                                 <form onSubmit={this.findTrack.bind(this, dispatch)}>
-                                    <div className="form-group">
+                                    <div className='form-group'>
                                         <input
-                                            type="text"
-                                            className="form-control form-control-lg"
+                                            type='text'
+                                            className='form-control form-control-lg'
                                             placeholder='Song title...'
                                             name='track_title'
                                             value={this.state.track_title}
@@ -50,7 +51,7 @@ class Search extends Component {
                                             autoFocus
                                         />
                                     </div>
-                                    <button className="btn btn-primary btn-lg w-100 mt-4" type='submit'>Find Lyrics
+                                    <button disabled={this.state.track_title === ''} className='btn btn-primary btn-lg w-100 mt-4' type='submit'>Find Lyrics
                                     </button>
                                 </form>
                             </div>

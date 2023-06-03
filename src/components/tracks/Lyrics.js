@@ -45,34 +45,34 @@ function Lyrics() {
                 <Link to='/' className='btn btn-dark btn-sm mb-4'>
                     Go Back
                 </Link>
-                <div className="card">
-                    <h5 className="card-header">
+                <div className='card'>
+                    <h5 className='card-header'>
                         {track.track.track_name} by{' '}
-                        <span className="text-secondary">{track.track.artist_name}</span>
+                        <span className='text-secondary'>{track.track.artist_name}</span>
                     </h5>
-                    <div className="card-body">
-                        <p className="card-text">
+                    <div className='card-body'>
+                        <p className='card-text'>
                             {lyrics.lyrics.lyrics_body}
                         </p>
                     </div>
                 </div>
 
-                <ul className="list-group mt-3">
-                    <li className="list-group-item">
+                <ul className='list-group mt-3'>
+                    <li className='list-group-item'>
                         <strong>Album</strong>:{' '}
                         {track.track.album_name}
                     </li>
-                    <li className="list-group-item">
+                    <li className='list-group-item'>
                         <strong>Song Genre</strong>:{' '}
                         {track.track.primary_genres.music_genre_list.length === 0 ? 'NO GENRE AVAILABLE' : track.track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
                     </li>
-                    <li className="list-group-item">
+                    <li className='list-group-item'>
                         <strong>Explicit Words</strong>:{' '}
                         {track.track.explicit === 0 ? 'No' : 'Yes'}
                     </li>
                 </ul>
-                <div className="embed-responsive embed-responsive-16by9 mt-3 mb-3 d-flex justify-content-center align-items-center">
-                    <iframe title="YouTube video" className="embed-responsive-item " src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+                <div className='embed-responsive embed-responsive-16by9 mt-3 mb-3 d-flex justify-content-center align-items-center'>
+                    <iframe title='YouTube video' className='embed-responsive-item ' src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                             allowFullScreen></iframe>
                 </div>
             </>

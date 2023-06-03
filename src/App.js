@@ -4,7 +4,6 @@ import Navbar from './components/layout/Navbar'
 import Index from './components/layout/Index'
 import Lyrics from './components/tracks/Lyrics'
 import {Provider} from './context'
-import './App.css';
 
 function App() {
     return (
