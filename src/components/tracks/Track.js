@@ -22,7 +22,7 @@ const Track = (props) => {
                     <Collapse in={open}>
                         <div id='collapse-content'>
                             <p className='card-text'>
-                                <strong><i className='fas fa-user'></i> ;&nbspArtist</strong>: {track.artist_name}
+                                <strong><i className='fas fa-user'></i> Artist</strong>: {track.artist_name}
                                 <br/>
                                 <strong><i className='fas fa-compact-disc'></i> Album</strong>: {track.album_name}
                             </p>
