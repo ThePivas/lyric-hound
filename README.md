@@ -20,7 +20,7 @@ Při navštívění domovské stránky je odeslán HTTP dotaz GET na Musixmatch 
 
 Po zadání části textu do vyhledávače a spuštění hledání je těchto 10 skladeb nahrazeno skladbami, jejichž text nejvíce odpovídá zadání uživatele. Uživatel si skladby může rozkliknout, podívat se na autora skladby a album, na kterém se skladba nachází a následně přejít na stránku s textem této skladby.
 
-Na stránce s textem je kromě něj zobrazeno Album, hudební žánr skladby a zda obsahuje explicitní výrazy. Pod těmito údaji je zároveň vloženo video skrze YouTube API, aby si uživatel mohl danou skladbu přehrát.
+Na stránce s textem je kromě něj zobrazeno Album, hudební žánr skladby a zda obsahuje explicitní výrazy. Pod těmito údaji je zároveň vloženo video skrze YouTube API, aby si uživatel mohl danou skladbu přehrát*.
 
 ## Splněné body zadání
 - dokumentace (viz README)
@@ -36,3 +36,5 @@ Na stránce s textem je kromě něj zobrazeno Album, hudební žánr skladby a z
 - OOP přístup
 - JS framework (React)
 - JS API (Musixmatch API)
+
+*: v případě, že se video nezobrazuje, byl přetížen počet požadavků na den.
