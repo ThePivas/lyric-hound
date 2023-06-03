@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {Consumer} from '../../context'
-import {ReactComponent as Hound} from '../layout/hound.svg'
+import {ReactComponent as Hound} from '../graphics/hound.svg'
 
 class Search extends Component {
 

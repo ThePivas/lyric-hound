@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Lyric Hound
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikace pro vyhledávání skladeb na základě útržků textu.
 
-## Available Scripts
+## Použité technologie
 
-In the project directory, you can run:
+Aplikace je vytvořena pomocí open-source frameworku React a psána v JavaScriptu. Ke stylování a zajištění responzivity vůči různým zařízením byla použita knihovna Bootstrap 5 v kombinaci s knihovnou FontAwesome pro ikony.
 
-### `npm start`
+Projekt využívá architektury založené na komponentách rozdělených podle tématické spojitosti. Struktura:
+- `src/components`: obsahuje všechny komponenty nutné k sestavení aplikace
+- `src/components/graphics`: grafické prvky
+- `src/components/layout`: strukturální komponenty
+- `src/components/tracks`: komponenty reprezentující výsledky vyhledávání
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Stav aplikace je spravován pomocí stavů pro třídy a React Hooks pro ostatní komponenty.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Popis funkcionality
 
-### `npm test`
+Při navštívění domovské stránky je odeslán HTTP dotaz GET na Musixmatch API skrze `axios.get()` pro získání nejposlouchanějších 10 skladeb za poslední týden. Aby byla aplikace funkční, je před URL tohoto api přidána předpona `https://corsproxy.io/?` k zabránění CORS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Po zadání části textu do vyhledávače a spuštění hledání je těchto 10 skladeb nahrazeno skladbami, jejichž text nejvíce odpovídá zadání uživatele. Uživatel si skladby může rozkliknout, podívat se na autora skladby a album, na kterém se skladba nachází a následně přejít na stránku s textem této skladby.
 
-### `npm run build`
+Na stránce s textem je kromě něj zobrazeno Album, hudební žánr skladby a zda obsahuje explicitní výrazy. Pod těmito údaji je zároveň vloženo video skrze YouTube API, aby si uživatel mohl danou skladbu přehrát.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Splněné body zadání
+- dokumentace (viz README)
+- validita (stránky nevykazují žádné erorry ani varování)
+- sémantické značky (použití značek `<nav>` a `<section>`)
+- grafika (SVG)
+- média (embedded video)
+- formulářové prvky (placeholder, autofocus, validace neprázdného dotazu)
+- selektory (Bootstrap)
+- vendor prefixy (Bootstrap)
+- CSS transitions (karty jednotlivých skladeb)
+- media queries (Bootstrap)
+- OOP přístup
+- JS framework (React)
+- JS API (Musixmatch API)

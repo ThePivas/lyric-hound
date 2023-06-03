@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Consumer} from '../../context'
-import Spinner from '../layout/spinner/Spinner'
-import Track from './Track'
+import Spinner from '../graphics/spinner/Spinner'
+import Track from '../tracks/Track'
 
 class Tracks extends Component {
     render() {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {Link, useParams} from 'react-router-dom'
 import axios from 'axios'
-import Spinner from '../layout/spinner/Spinner'
+import Spinner from '../graphics/spinner/Spinner'
 
 function Lyrics() {
 
@@ -71,8 +71,8 @@ function Lyrics() {
                         {track.track.explicit === 0 ? 'No' : 'Yes'}
                     </li>
                 </ul>
-                <div className="ratio ratio-16x9 mt-3 mb-3">
-                    <iframe title="YouTube video" src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+                <div className="embed-responsive embed-responsive-16by9 ratio ratio-16x9 mt-3 mb-3">
+                    <iframe title="YouTube video" className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                             allowFullScreen></iframe>
                 </div>
             </>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Tracks from '../tracks/Tracks'
-import Search from '../tracks/Search'
+import Tracks from './layout/Tracks'
+import Search from './layout/Search'
 
 const Index = () => {
     return (
