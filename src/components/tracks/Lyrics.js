@@ -72,7 +72,7 @@ function Lyrics() {
                     </li>
                 </ul>
                 <div className="embed-responsive embed-responsive-16by9 ratio ratio-16x9 mt-3 mb-3">
-                    <iframe title="YouTube video" className="embed-responsive-item" src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+                    <iframe title="YouTube video" className="embed-responsive-item rounded" src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                             allowFullScreen></iframe>
                 </div>
             </>
